@@ -1,0 +1,325 @@
+/* =========================================================
+   TOKENS — edit these to retheme the whole site
+   ========================================================= */
+:root{
+  --ink: #10161F;        /* primary dark background */
+  --ink-line: #26313D;   /* hairline dividers on dark */
+  --paper: #EDEFF0;      /* light section background */
+  --paper-line: #D8DCE0; /* hairline dividers on light */
+  --ink-text: #10161F;
+  --paper-text: #EDEFF0;
+  --slate: #59626D;      /* secondary text */
+  --amber: #E8A33D;      /* build accent */
+  --teal: #3FA796;       /* watch accent */
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --wrap: 960px;
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink-text);
+  background: var(--paper);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap{
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a{ color: inherit; }
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{
+  background: var(--ink);
+  color: var(--paper-text);
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 40px 24px 28px;
+}
+
+.name{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.role{
+  margin: 6px 0 0;
+  color: #9AA5B1;
+  font-size: 1rem;
+}
+
+.status-line{
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9AA5B1;
+  border: 1px solid var(--ink-line);
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.status-dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 3px rgba(63,167,150,0.18);
+}
+
+button {
+  padding: 10px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--slate);
+  color: var(--paper);
+}
+button:hover {
+  background: var(--ink-line);
+  color: var(--paper);
+}
+
+.status-clock{ color: #6B7684; }
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+.intro{ padding: 56px 24px 8px; }
+
+.intro-lede{
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+  font-weight: 400;
+  max-width: 620px;
+  color: var(--ink-text);
+  margin: 0;
+}
+
+/* =========================================================
+   LANES (structural, not decorative — two disciplines that
+   run in parallel and converge at Projects)
+   ========================================================= */
+.lanes{
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 40px;
+  padding: 56px 24px;
+  align-items: start;
+}
+
+.lane-divider{
+  background: var(--paper-line);
+  height: 100%;
+  min-height: 200px;
+}
+
+.lane-title{
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+}
+
+.lane-build .lane-title{ color: #B8791E; }
+.lane-watch .lane-title{ color: #2C7E70; }
+
+.lane-desc{
+  color: var(--slate);
+  margin: 0 0 20px;
+  max-width: 40ch;
+}
+
+.skill-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-list li{
+  font-size: 0.95rem;
+  padding-left: 14px;
+  position: relative;
+}
+
+.lane-build .skill-list li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 6px; height: 6px;
+  background: var(--amber);
+}
+
+.lane-watch .skill-list li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 6px; height: 6px;
+  background: var(--teal);
+}
+
+/* =========================================================
+   SECTION TITLES (shared)
+   ========================================================= */
+.section-title{
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0 0 4px;
+}
+
+.section-sub{
+  color: var(--slate);
+  margin: 0 0 32px;
+}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+.projects{ padding: 40px 24px 64px; }
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--paper-line);
+  border: 1px solid var(--paper-line);
+}
+
+.project-card{
+  background: var(--paper);
+  padding: 28px;
+}
+
+.project-tag{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate);
+  margin: 0 0 10px;
+}
+
+.project-name{
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.project-desc{
+  color: var(--slate);
+  font-size: 0.92rem;
+  margin: 0 0 12px;
+}
+
+.project-stack{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--slate);
+  margin: 0 0 16px;
+}
+
+.project-links{
+  display: flex;
+  gap: 16px;
+}
+
+.project-links a{
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{
+  background: var(--ink);
+  color: var(--paper-text);
+  padding: 56px 24px;
+}
+
+.contact .section-title{ color: var(--paper-text); }
+.contact .section-sub{ color: #9AA5B1; }
+
+.contact-links{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-links a{
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #3A4552;
+  padding-bottom: 2px;
+}
+
+.contact-links a:hover{ border-color: var(--teal); }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{
+  background: var(--ink);
+  color: #6B7684;
+  border-top: 1px solid var(--ink-line);
+  font-size: 0.8rem;
+  padding: 20px 24px;
+}
+
+/* =========================================================
+   ACCESSIBILITY / MOTION
+   ========================================================= */
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 720px){
+  .lanes{
+    grid-template-columns: 1fr;
+  }
+  .lane-divider{ display: none; }
+  .project-grid{
+    grid-template-columns: 1fr;
+  }
+  .header-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

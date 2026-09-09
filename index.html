@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Web Developer &amp; SOC Analyst</title>
+<meta name="description" content="Portfolio of Your Name — web development and security operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="identity">
+      <p class="name">Precious Abimbola Chukwu</p>
+      <p class="role">Web developer. SOC analyst in training.</p>
+    </div>
+    <!-- Status line: edit the two fields via data attributes in script.js -->
+    <div class="status-line" id="statusLine">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-text" id="statusText">systems nominal</span>
+      <span class="status-clock" id="statusClock">--:--:--</span>
+    </div>
+
+    <div>
+      <button id="project-btn">PROJECTS</button>
+      <button id="contact-btn">CONTACT</button>      
+      <!-- <button id="contact-btn">Contact</button> -->
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ INTRO ============ -->
+  <section class="intro wrap">
+    <p class="intro-lede">
+      I build software and I watch networks. Two disciplines,
+      one habit: pay attention to what's actually happening,
+      not what's supposed to be happening.
+    </p>
+  </section>
+
+  <!-- ============ TWO LANES: BUILD / WATCH ============ -->
+  <section class="lanes wrap" id="lanes">
+    <div class="lane lane-build">
+      <h2 class="lane-title">Build</h2>
+      <p class="lane-desc">
+        Full-stack web development — from static frontends to
+        backends with real data and auth.
+      </p>
+      <ul class="skill-list">
+        <li>HTML / CSS / JavaScript</li>
+        <li>Node.js &amp; Express.js</li>
+        <li>Mongoose DB<!-- add: databases, frameworks, etc. --></li>
+      </ul>
+    </div>
+
+    <div class="lane-divider" aria-hidden="true"></div>
+
+    <div class="lane lane-watch">
+      <h2 class="lane-title">Watch</h2>
+      <p class="lane-desc">
+        Security operations — network fundamentals, log analysis,
+        and a home lab built to practice detection.
+      </p>
+      <ul class="skill-list">
+        <li>Networking &amp; subnetting (CIDR)</li>
+        <li>Windows Server 2022 (lab environment)</li>
+        <li>Wazuh (SIEM)</li>
+        <li>Kali Linux</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS (convergence point) ============ -->
+  <section class="projects wrap" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Where the two lanes meet.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <p class="project-tag">build</p>
+        <h3 class="project-name">E Vault</h3>
+        <p class="project-desc">
+          A private vault for passwords and notes — simple, fast, and built entirely from the ground up.
+        </p>
+        <p class="project-stack">Stack: HTML, CSS, JS</p>
+        <div class="project-links">
+          <a href=" https://pinzin99.github.io/E-Vault/">Live</a>
+          <a href="#">Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <p class="project-tag">build</p>
+        <h3 class="project-name">Study &amp; task tracker</h3>
+        <p class="project-desc">
+          Full-stack tracker for tasks and study sessions — frontend
+          plus an Express.js backend.
+        </p>
+        <p class="project-stack">Stack: HTML, CSS, JS, Express.js</p>
+        <div class="project-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <p class="project-tag">watch</p>
+        <h3 class="project-name">Home lab: detection setup</h3>
+        <p class="project-desc">
+          Windows Server 2022 and Kali Linux lab monitored with
+          Wazuh — write-up of what was configured and what it
+          catches.
+        </p>
+        <p class="project-stack">Stack: Windows Server, Kali, Wazuh</p>
+        <div class="project-links">
+          <a href="#">Write-up</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <p class="project-tag">build</p>
+        <h3 class="project-name">Project name</h3>
+        <p class="project-desc">
+          One or two sentences on what it does and why you built it.
+        </p>
+        <p class="project-stack">Stack: —</p>
+        <div class="project-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact wrap" id="contact">
+    <h2 class="section-title">Get in touch</h2>
+    <div class="contact-links">
+      <a href="mailto:abipinzing224@gmail.com">abipinzing224@gmail.com</a>
+      <a href="https://github.com/Pinzin99" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/precious-chukwu-7b2795253" target="_blank">LinkedIn</a>
+      <a href="https://wa.me/7037827676">Whatsapp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year"></span> pinzin</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
